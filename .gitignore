@@ -1,0 +1,63 @@
+## Build results
+bin/
+obj/
+[Bb]uild/
+[Dd]ebug*/
+[Rr]elease*/
+
+## User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Visual Studio specific
+.vs/
+*.vcxproj.user
+*.csproj.user
+
+## Logs
+*.log
+
+## NuGet
+*.nupkg
+*.snupkg
+packages/
+*.nuspec
+
+## Backup files
+*.bak
+*.tmp
+
+## Publish output
+pub/
+publish/
+app.publish/
+
+## Others
+*.DS_Store
+Thumbs.db
+
+## Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+## Rider
+.idea/
+
+## Cache
+*.cache
+*.dbmdl
+*.jfm
+
+## Auto-generated files
+*.g.i.cs
+*.g.cs
+
+## Entity Framework
+Migrations/
+
+## Windows Forms designer files (auto-generated but should be kept)
+!*.Designer.cs
+
