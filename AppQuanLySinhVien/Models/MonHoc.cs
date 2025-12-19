@@ -10,7 +10,15 @@ namespace AppQuanLySinhVien.Models
     {
         public string MaMonHoc { get; set; }
         public string TenMonHoc { get; set; }
+        List<SinhVien> DanhSachSinhVien { get; set; }
 
+        public MonHoc(string maMonHoc, string tenMonHoc)
+        {
+            MaMonHoc = maMonHoc;
+            TenMonHoc = tenMonHoc;
+            DanhSachSinhVien = new List<SinhVien>();
 
+        }
     }
+   
 }

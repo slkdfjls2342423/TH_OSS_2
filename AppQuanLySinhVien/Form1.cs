@@ -16,16 +16,21 @@ namespace AppQuanLySinhVien
     {
         private SqlConnection con;
         private HocSinhCtr hocSinhCtr;
+        private MonHocCtr monHocCtr;
         public Form1()
         {
             InitializeComponent();
             hocSinhCtr = new HocSinhCtr(Program.connectionString);
+            monHocCtr = new MonHocCtr(Program.connectionString);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             DataTable dt = hocSinhCtr.LayDanhSachHocSinh();
             dgvHocSinh.DataSource = dt;
+
+            DataTable dtmh = monHocCtr.LayDanhSachMonHoc();
+            dgvMonHoc.DataSource = dtmh;
         }
     }
 }
