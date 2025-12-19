@@ -86,5 +86,19 @@ namespace AppQuanLySinhVien
             frThemSV fr = new frThemSV();
             fr.ShowDialog();
         }
+
+        private void btnSuaHocSinh_Click(object sender, EventArgs e)
+        {
+            if (rowIndex >= 0)
+            {
+                frSuaSV fr = new frSuaSV(hocSinhCtr.Get(maSinhVien));
+                fr.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn một học sinh để sửa.");
+            }
+
+        }
     }
 }

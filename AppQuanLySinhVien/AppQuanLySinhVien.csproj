@@ -57,6 +57,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frSuaSV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frSuaSV.Designer.cs">
+      <DependentUpon>frSuaSV.cs</DependentUpon>
+    </Compile>
     <Compile Include="frThemSV.cs">
       <SubType>Form</SubType>
     </Compile>

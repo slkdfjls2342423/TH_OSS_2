@@ -49,7 +49,7 @@ namespace AppQuanLySinhVien
                 txtMaSV.Text,           // maSinhVien
                 txtHoTen.Text,          // hoTen
                 dtpNgaySinh.Value,      // ngaySinh
-                rbNam.Checked,          // gioiTinh (True nếu chọn Nam)
+                rbNam.Checked?"nam":"nu",          // gioiTinh (True nếu chọn Nam)
                 txtDiaChi.Text,         // diaChi
                 maLopChon    // maLop (Lấy từ object Lop)
             );

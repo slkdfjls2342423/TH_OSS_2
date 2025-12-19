@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AppQuanLySinhVien.Models
 {
-    internal class Lop
+    public class Lop
     {
         public string MaLop { get; set; }
         public string TenLop { get; set; }

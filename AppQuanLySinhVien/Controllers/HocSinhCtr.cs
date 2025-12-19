@@ -10,7 +10,7 @@ using AppQuanLySinhVien.Models;
 
 namespace AppQuanLySinhVien.Controllers
 {
-    internal class HocSinhCtr
+    public class HocSinhCtr
     {
         private SqlConnection con;
         public HocSinhCtr(string connectionString)
@@ -28,6 +28,42 @@ namespace AppQuanLySinhVien.Controllers
             DataTable dt = new DataTable();
             da.Fill(dt);
             return dt;
+        }
+        public SinhVien Get(string MaSV)
+        {
+            if (con.State == System.Data.ConnectionState.Closed)
+            {
+                con.Open();
+            }
+
+            // Nên dùng Parameter để chống SQL Injection
+            SqlCommand cmd = new SqlCommand("SELECT * FROM SINHVIEN WHERE MaSV = @MaSV", con);
+            cmd.Parameters.AddWithValue("@MaSV", MaSV);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            // Kiểm tra nếu có dữ liệu thì mới chuyển đổi
+            if (dt.Rows.Count > 0)
+            {
+                DataRow dr = dt.Rows[0];
+
+                // Tạo đối tượng Model từ dòng dữ liệu
+                SinhVien sv = new SinhVien()
+                {
+                    MaSinhVien = dr["MaSV"].ToString(),
+                    HoTen = dr["Ten"].ToString(),
+                    NgaySinh = Convert.ToDateTime(dr["NgaySinh"]),
+                    GioiTinh = dr["phai"].ToString(),
+                    DiaChi = dr["DiaChi"].ToString(),
+                    MaLop = dr["MaLop"].ToString()
+                };
+                MessageBox.Show(sv.ToString());
+                return sv;
+            }
+            MessageBox.Show("Không tìm thấy sinh viên với mã: " + MaSV);
+            return null; // Trả về null nếu không tìm thấy sinh viên
         }
         public int ThemHocSinh( SinhVien sinhVien)
         {
