@@ -15,13 +15,15 @@ namespace AppQuanLySinhVien
     public partial class frThemSV : Form
     {
         private HocSinhCtr hocSinhCtr;
+        private LopCtr lopCtr;
         public frThemSV()
         {
             InitializeComponent();
             hocSinhCtr = new HocSinhCtr(Program.connectionString);
-
-            Dictionary<string,string> danhSachLop = new Dictionary<string, string>();
-
+            lopCtr = new LopCtr(Program.connectionString);
+            cboLop.DataSource = lopCtr.LayDanhSachLop();
+            cboLop.DisplayMember = "TenLop"; // Hiển thị tên lớp
+            cboLop.ValueMember = "MaLop";   // Giá trị là mã lớp
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
