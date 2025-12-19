@@ -8,6 +8,7 @@ namespace AppQuanLySinhVien
 {
     internal static class Program
     {
+        public static string connectionString = @"Data Source=.;Initial Catalog=QLSV;Integrated Security=True";
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
