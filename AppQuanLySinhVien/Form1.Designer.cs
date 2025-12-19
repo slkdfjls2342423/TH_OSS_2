@@ -51,8 +51,8 @@
             // 
             // tabControlMain
             // 
-            this.tabControlMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tabControlMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControlMain.Controls.Add(this.tabPageHocSinh);
             this.tabControlMain.Controls.Add(this.tabPageLop);
@@ -81,14 +81,16 @@
             // 
             // btnReloadHocSinh
             // 
+            this.btnReloadHocSinh.BackColor = System.Drawing.Color.Gray;
+            this.btnReloadHocSinh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReloadHocSinh.ForeColor = System.Drawing.Color.White;
             this.btnReloadHocSinh.Location = new System.Drawing.Point(841, 287);
             this.btnReloadHocSinh.Name = "btnReloadHocSinh";
             this.btnReloadHocSinh.Size = new System.Drawing.Size(138, 65);
             this.btnReloadHocSinh.TabIndex = 3;
             this.btnReloadHocSinh.Text = "Làm mới";
-            this.btnReloadHocSinh.BackColor = System.Drawing.Color.Gray;
-            this.btnReloadHocSinh.ForeColor = System.Drawing.Color.White;
-            this.btnReloadHocSinh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReloadHocSinh.UseVisualStyleBackColor = false;
+            this.btnReloadHocSinh.Click += new System.EventHandler(this.btnReloadHocSinh_Click);
             // 
             // btnXoaHocSinh
             // 
@@ -97,6 +99,7 @@
             this.btnXoaHocSinh.Size = new System.Drawing.Size(138, 65);
             this.btnXoaHocSinh.TabIndex = 2;
             this.btnXoaHocSinh.Text = "Xóa";
+            this.btnXoaHocSinh.Click += new System.EventHandler(this.btnXoaHocSinh_Click);
             // 
             // btnSuaHocSinh
             // 
@@ -121,12 +124,13 @@
             this.lblTitleHocSinh.Location = new System.Drawing.Point(15, 15);
             this.lblTitleHocSinh.Name = "lblTitleHocSinh";
             this.lblTitleHocSinh.Size = new System.Drawing.Size(184, 25);
+            this.lblTitleHocSinh.TabIndex = 4;
             this.lblTitleHocSinh.Text = "Danh sách Học sinh";
             // 
             // dgvHocSinh
             // 
-            this.dgvHocSinh.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.dgvHocSinh.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvHocSinh.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvHocSinh.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
@@ -134,6 +138,7 @@
             this.dgvHocSinh.Name = "dgvHocSinh";
             this.dgvHocSinh.Size = new System.Drawing.Size(820, 370);
             this.dgvHocSinh.TabIndex = 1;
+            this.dgvHocSinh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHocSinh_CellClick);
             // 
             // tabPageLop
             // 
@@ -152,14 +157,15 @@
             // 
             // btnReloadLop
             // 
+            this.btnReloadLop.BackColor = System.Drawing.Color.Gray;
+            this.btnReloadLop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReloadLop.ForeColor = System.Drawing.Color.White;
             this.btnReloadLop.Location = new System.Drawing.Point(841, 287);
             this.btnReloadLop.Name = "btnReloadLop";
             this.btnReloadLop.Size = new System.Drawing.Size(138, 65);
             this.btnReloadLop.TabIndex = 3;
             this.btnReloadLop.Text = "Làm mới";
-            this.btnReloadLop.BackColor = System.Drawing.Color.Gray;
-            this.btnReloadLop.ForeColor = System.Drawing.Color.White;
-            this.btnReloadLop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReloadLop.UseVisualStyleBackColor = false;
             // 
             // btnSuaLop
             // 
@@ -192,12 +198,13 @@
             this.lblTitleLop.Location = new System.Drawing.Point(15, 15);
             this.lblTitleLop.Name = "lblTitleLop";
             this.lblTitleLop.Size = new System.Drawing.Size(178, 25);
+            this.lblTitleLop.TabIndex = 4;
             this.lblTitleLop.Text = "Danh sách Lớp học";
             // 
             // dgvLop
             // 
-            this.dgvLop.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.dgvLop.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvLop.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvLop.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
@@ -223,14 +230,15 @@
             // 
             // btnReloadMon
             // 
+            this.btnReloadMon.BackColor = System.Drawing.Color.Gray;
+            this.btnReloadMon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReloadMon.ForeColor = System.Drawing.Color.White;
             this.btnReloadMon.Location = new System.Drawing.Point(841, 287);
             this.btnReloadMon.Name = "btnReloadMon";
             this.btnReloadMon.Size = new System.Drawing.Size(138, 65);
             this.btnReloadMon.TabIndex = 3;
             this.btnReloadMon.Text = "Làm mới";
-            this.btnReloadMon.BackColor = System.Drawing.Color.Gray;
-            this.btnReloadMon.ForeColor = System.Drawing.Color.White;
-            this.btnReloadMon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReloadMon.UseVisualStyleBackColor = false;
             // 
             // btnXoaMon
             // 
@@ -263,12 +271,13 @@
             this.lblTitleMon.Location = new System.Drawing.Point(15, 15);
             this.lblTitleMon.Name = "lblTitleMon";
             this.lblTitleMon.Size = new System.Drawing.Size(186, 25);
+            this.lblTitleMon.TabIndex = 4;
             this.lblTitleMon.Text = "Danh mục Môn học";
             // 
             // dgvMonHoc
             // 
-            this.dgvMonHoc.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.dgvMonHoc.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvMonHoc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMonHoc.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
@@ -285,6 +294,7 @@
             this.lblHeader.Location = new System.Drawing.Point(0, 0);
             this.lblHeader.Name = "lblHeader";
             this.lblHeader.Size = new System.Drawing.Size(1014, 80);
+            this.lblHeader.TabIndex = 2;
             this.lblHeader.Text = "HỆ THỐNG QUẢN LÝ ĐÀO TẠO";
             this.lblHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 

@@ -16,6 +16,8 @@ namespace AppQuanLySinhVien
     {
         private SqlConnection con;
         private HocSinhCtr hocSinhCtr;
+        private string maSinhVien = "";
+        private int rowIndex = -1;
         public Form1()
         {
             InitializeComponent();
@@ -26,6 +28,35 @@ namespace AppQuanLySinhVien
         {
             DataTable dt = hocSinhCtr.LayDanhSachHocSinh();
             dgvHocSinh.DataSource = dt;
+        }
+
+        private void btnReloadHocSinh_Click(object sender, EventArgs e)
+        {
+            dgvHocSinh.DataSource = hocSinhCtr.LayDanhSachHocSinh();
+        }
+
+        private void dgvHocSinh_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            rowIndex = e.RowIndex;
+            maSinhVien = dgvHocSinh.Rows[rowIndex].Cells["MaSV"].Value.ToString();
+            MessageBox.Show("Row index: " + rowIndex+ "mssv: "+maSinhVien);
+        }
+
+        private void btnXoaHocSinh_Click(object sender, EventArgs e)
+        {
+            if(rowIndex >= 0)
+            {
+                int result = hocSinhCtr.XoaHocSinh(maSinhVien);
+                if (result > 0)
+                {
+                    dgvHocSinh.DataSource = hocSinhCtr.LayDanhSachHocSinh();
+                    rowIndex = -1;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn một học sinh để xóa.");
+            }
         }
     }
 }
