@@ -58,7 +58,8 @@ namespace AppQuanLySinhVien
             {
                 this.Close(); // Đóng form sau khi lưu
             }
-            MessageBox.Show("Thêm sinh viên thất b��i!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+                MessageBox.Show("Thêm sinh viên thất b��i!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
 
