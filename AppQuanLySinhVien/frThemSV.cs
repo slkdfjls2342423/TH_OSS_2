@@ -35,11 +35,10 @@ namespace AppQuanLySinhVien
                 return;
             }
 
-            // 2. Lấy đối tượng Lớp đang được chọn từ ComboBox
-            // Giả sử bạn đã load danh sách đối tượng Lop vào ComboBox
-            Lop lopDuocChon = cboLop.SelectedItem as Lop;
+            
+             string maLopChon = cboLop.SelectedValue.ToString();
 
-            if (lopDuocChon == null)
+            if (maLopChon == null)
             {
                 MessageBox.Show("Vui lòng chọn lớp học!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -52,8 +51,7 @@ namespace AppQuanLySinhVien
                 dtpNgaySinh.Value,      // ngaySinh
                 rbNam.Checked,          // gioiTinh (True nếu chọn Nam)
                 txtDiaChi.Text,         // diaChi
-                lopDuocChon.MaLop,      // maLop (Lấy từ object Lop)
-                lopDuocChon             // lopHoc (Đối tượng Lop)
+                maLopChon    // maLop (Lấy từ object Lop)
             );
 
             if(hocSinhCtr.ThemHocSinh(sv) > 0)

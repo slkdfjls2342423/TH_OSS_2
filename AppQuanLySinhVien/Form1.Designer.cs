@@ -86,21 +86,17 @@
             this.btnReloadHocSinh.BackColor = System.Drawing.Color.Gray;
             this.btnReloadHocSinh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReloadHocSinh.ForeColor = System.Drawing.Color.White;
-<<<<<<< HEAD
-            this.btnReloadHocSinh.Location = new System.Drawing.Point(841, 287);
-=======
+
             this.btnReloadHocSinh.Location = new System.Drawing.Point(1121, 353);
             this.btnReloadHocSinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
->>>>>>> lop
+
             this.btnReloadHocSinh.Name = "btnReloadHocSinh";
             this.btnReloadHocSinh.Size = new System.Drawing.Size(184, 80);
             this.btnReloadHocSinh.TabIndex = 3;
             this.btnReloadHocSinh.Text = "Làm mới";
             this.btnReloadHocSinh.UseVisualStyleBackColor = false;
-<<<<<<< HEAD
             this.btnReloadHocSinh.Click += new System.EventHandler(this.btnReloadHocSinh_Click);
-=======
->>>>>>> lop
+
             // 
             // btnXoaHocSinh
             // 
@@ -138,11 +134,9 @@
             this.lblTitleHocSinh.Location = new System.Drawing.Point(20, 18);
             this.lblTitleHocSinh.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitleHocSinh.Name = "lblTitleHocSinh";
-<<<<<<< HEAD
-            this.lblTitleHocSinh.Size = new System.Drawing.Size(184, 25);
-=======
+
             this.lblTitleHocSinh.Size = new System.Drawing.Size(238, 32);
->>>>>>> lop
+
             this.lblTitleHocSinh.TabIndex = 4;
             this.lblTitleHocSinh.Text = "Danh sách Học sinh";
             // 
@@ -181,21 +175,18 @@
             this.btnReloadLop.BackColor = System.Drawing.Color.Gray;
             this.btnReloadLop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReloadLop.ForeColor = System.Drawing.Color.White;
-<<<<<<< HEAD
-            this.btnReloadLop.Location = new System.Drawing.Point(841, 287);
-=======
+
             this.btnReloadLop.Location = new System.Drawing.Point(1121, 353);
             this.btnReloadLop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
->>>>>>> lop
+
             this.btnReloadLop.Name = "btnReloadLop";
             this.btnReloadLop.Size = new System.Drawing.Size(184, 80);
             this.btnReloadLop.TabIndex = 3;
             this.btnReloadLop.Text = "Làm mới";
             this.btnReloadLop.UseVisualStyleBackColor = false;
-<<<<<<< HEAD
-=======
+
             this.btnReloadLop.Click += new System.EventHandler(this.btnReloadLop_Click);
->>>>>>> lop
+
             // 
             // btnSuaLop
             // 
@@ -231,11 +222,9 @@
             this.lblTitleLop.Location = new System.Drawing.Point(20, 18);
             this.lblTitleLop.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitleLop.Name = "lblTitleLop";
-<<<<<<< HEAD
-            this.lblTitleLop.Size = new System.Drawing.Size(178, 25);
-=======
+
             this.lblTitleLop.Size = new System.Drawing.Size(229, 32);
->>>>>>> lop
+
             this.lblTitleLop.TabIndex = 4;
             this.lblTitleLop.Text = "Danh sách Lớp học";
             // 
@@ -274,12 +263,10 @@
             this.btnReloadMon.BackColor = System.Drawing.Color.Gray;
             this.btnReloadMon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReloadMon.ForeColor = System.Drawing.Color.White;
-<<<<<<< HEAD
-            this.btnReloadMon.Location = new System.Drawing.Point(841, 287);
-=======
+
             this.btnReloadMon.Location = new System.Drawing.Point(1121, 353);
             this.btnReloadMon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
->>>>>>> lop
+
             this.btnReloadMon.Name = "btnReloadMon";
             this.btnReloadMon.Size = new System.Drawing.Size(184, 80);
             this.btnReloadMon.TabIndex = 3;
@@ -320,11 +307,9 @@
             this.lblTitleMon.Location = new System.Drawing.Point(20, 18);
             this.lblTitleMon.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitleMon.Name = "lblTitleMon";
-<<<<<<< HEAD
-            this.lblTitleMon.Size = new System.Drawing.Size(186, 25);
-=======
+
             this.lblTitleMon.Size = new System.Drawing.Size(239, 32);
->>>>>>> lop
+
             this.lblTitleMon.TabIndex = 4;
             this.lblTitleMon.Text = "Danh mục Môn học";
             // 
@@ -349,11 +334,8 @@
             this.lblHeader.Location = new System.Drawing.Point(0, 0);
             this.lblHeader.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHeader.Name = "lblHeader";
-<<<<<<< HEAD
-            this.lblHeader.Size = new System.Drawing.Size(1014, 80);
-=======
             this.lblHeader.Size = new System.Drawing.Size(1352, 98);
->>>>>>> lop
+
             this.lblHeader.TabIndex = 2;
             this.lblHeader.Text = "HỆ THỐNG QUẢN LÝ ĐÀO TẠO";
             this.lblHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

@@ -16,7 +16,7 @@ namespace AppQuanLySinhVien.Models
         public string MaLop { get; set; }
         public Lop LopHoc { get; set; }
 
-        public SinhVien(string maSinhVien, string hoTen, DateTime ngaySinh, bool gioiTinh, string diaChi, string maLop, Lop lopHoc)
+        public SinhVien(string maSinhVien, string hoTen, DateTime ngaySinh, bool gioiTinh, string diaChi, string maLop)
         {
             MaSinhVien = maSinhVien;
             HoTen = hoTen;
@@ -24,7 +24,6 @@ namespace AppQuanLySinhVien.Models
             GioiTinh = gioiTinh;
             DiaChi = diaChi;
             MaLop = maLop;
-            LopHoc = lopHoc;
         }
     }
 }
