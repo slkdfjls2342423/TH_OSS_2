@@ -116,6 +116,7 @@
             this.btnThemHocSinh.Size = new System.Drawing.Size(138, 65);
             this.btnThemHocSinh.TabIndex = 0;
             this.btnThemHocSinh.Text = "Thêm";
+            this.btnThemHocSinh.Click += new System.EventHandler(this.btnThemHocSinh_Click);
             // 
             // lblTitleHocSinh
             // 

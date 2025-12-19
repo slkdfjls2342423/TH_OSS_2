@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AppQuanLySinhVien.Models;
 
 namespace AppQuanLySinhVien.Controllers
 {
@@ -28,7 +29,7 @@ namespace AppQuanLySinhVien.Controllers
             da.Fill(dt);
             return dt;
         }
-        public int ThemHocSinh(string maSinhVien, string hoTen, DateTime ngaySinh, bool gioiTinh, string diaChi, string maLop)
+        public int ThemHocSinh( SinhVien sinhVien)
         {
             try
             {
@@ -36,18 +37,27 @@ namespace AppQuanLySinhVien.Controllers
                 {
                     con.Open();
                 }
-                SqlCommand cmd = new SqlCommand("INSERT INTO SINHVIEN (MaSinhVien, HoTen, NgaySinh, GioiTinh, DiaChi, MaLop) VALUES (@MaSinhVien, @HoTen, @NgaySinh, @GioiTinh, @DiaChi, @MaLop)", con);
-                cmd.Parameters.AddWithValue("@MaSinhVien", maSinhVien);
-                cmd.Parameters.AddWithValue("@HoTen", hoTen);
-                cmd.Parameters.AddWithValue("@NgaySinh", ngaySinh);
-                cmd.Parameters.AddWithValue("@GioiTinh", gioiTinh);
-                cmd.Parameters.AddWithValue("@DiaChi", diaChi);
-                cmd.Parameters.AddWithValue("@MaLop", maLop);
+                SqlCommand cmd = new SqlCommand("INSERT INTO SINHVIEN (MaSv, Ten, NgaySinh, phai, DiaChi, MaLop) VALUES (@MaSinhVien, @HoTen, @NgaySinh, @GioiTinh, @DiaChi, @MaLop)", con);
+                cmd.Parameters.AddWithValue("@MaSinhVien", sinhVien.MaSinhVien);
+                cmd.Parameters.AddWithValue("@HoTen", sinhVien.HoTen);
+                cmd.Parameters.AddWithValue("@NgaySinh", sinhVien.NgaySinh);
+                cmd.Parameters.AddWithValue("@GioiTinh", sinhVien.GioiTinh);
+                cmd.Parameters.AddWithValue("@DiaChi", sinhVien.DiaChi);
+                cmd.Parameters.AddWithValue("@MaLop", sinhVien.MaLop);
                 int rowsAffected = cmd.ExecuteNonQuery();
+                if (rowsAffected != 0)
+                {
+                    MessageBox.Show("Thêm học sinh thành công!");
+                }
+                else
+                {
+                    MessageBox.Show("Thêm học sinh thất bại!");
+                }
                 return rowsAffected ;
             }
             catch (Exception)
             {
+                MessageBox.Show("Thêm học sinh thất bại!");
                 return 0;
             }
         }

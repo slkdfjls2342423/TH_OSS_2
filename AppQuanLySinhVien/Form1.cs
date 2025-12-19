@@ -58,5 +58,11 @@ namespace AppQuanLySinhVien
                 MessageBox.Show("Vui lòng chọn một học sinh để xóa.");
             }
         }
+
+        private void btnThemHocSinh_Click(object sender, EventArgs e)
+        {
+            frThemSV fr = new frThemSV();
+            fr.ShowDialog();
+        }
     }
 }
