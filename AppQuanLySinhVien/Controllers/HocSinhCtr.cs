@@ -90,9 +90,9 @@ namespace AppQuanLySinhVien.Controllers
                 }
                 return rowsAffected ;
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                MessageBox.Show("Thêm học sinh thất bại!");
+                MessageBox.Show("Thêm học sinh thất bại: "+e.Message);
                 return 0;
             }
         }
