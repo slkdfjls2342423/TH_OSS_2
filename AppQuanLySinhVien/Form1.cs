@@ -73,6 +73,12 @@ namespace AppQuanLySinhVien
                 }
             }
         }
+
+        private void btnThemLop_Click(object sender, EventArgs e)
+        {
+            frThemLop fr = new frThemLop();
+            fr.ShowDialog();
+        }
     }
     }
 

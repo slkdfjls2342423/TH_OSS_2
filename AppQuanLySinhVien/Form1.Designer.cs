@@ -192,6 +192,7 @@
             this.btnThemLop.Size = new System.Drawing.Size(184, 80);
             this.btnThemLop.TabIndex = 0;
             this.btnThemLop.Text = "Thêm";
+            this.btnThemLop.Click += new System.EventHandler(this.btnThemLop_Click);
             // 
             // btnXoaLop
             // 
