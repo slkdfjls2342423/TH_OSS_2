@@ -44,6 +44,8 @@
             this.lblGioiTinh = new System.Windows.Forms.Label();
             this.lblDiaChi = new System.Windows.Forms.Label();
             this.lblLop = new System.Windows.Forms.Label();
+            this.txtNoiSinh = new System.Windows.Forms.TextBox();
+            this.lblNoiSinh = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelTitle
@@ -103,7 +105,7 @@
             // 
             // txtDiaChi
             // 
-            this.txtDiaChi.Location = new System.Drawing.Point(160, 257);
+            this.txtDiaChi.Location = new System.Drawing.Point(160, 287);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(220, 23);
             this.txtDiaChi.TabIndex = 11;
@@ -111,7 +113,7 @@
             // cboLop
             // 
             this.cboLop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboLop.Location = new System.Drawing.Point(160, 302);
+            this.cboLop.Location = new System.Drawing.Point(160, 332);
             this.cboLop.Name = "cboLop";
             this.cboLop.Size = new System.Drawing.Size(220, 23);
             this.cboLop.TabIndex = 13;
@@ -121,7 +123,7 @@
             this.btnLuu.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLuu.ForeColor = System.Drawing.Color.White;
-            this.btnLuu.Location = new System.Drawing.Point(100, 360);
+            this.btnLuu.Location = new System.Drawing.Point(100, 375);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(110, 35);
             this.btnLuu.TabIndex = 14;
@@ -131,7 +133,7 @@
             // 
             // btnHuy
             // 
-            this.btnHuy.Location = new System.Drawing.Point(230, 360);
+            this.btnHuy.Location = new System.Drawing.Point(230, 375);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(100, 35);
             this.btnHuy.TabIndex = 15;
@@ -178,7 +180,7 @@
             // lblDiaChi
             // 
             this.lblDiaChi.AutoSize = true;
-            this.lblDiaChi.Location = new System.Drawing.Point(50, 260);
+            this.lblDiaChi.Location = new System.Drawing.Point(50, 290);
             this.lblDiaChi.Name = "lblDiaChi";
             this.lblDiaChi.Size = new System.Drawing.Size(48, 15);
             this.lblDiaChi.TabIndex = 10;
@@ -187,17 +189,35 @@
             // lblLop
             // 
             this.lblLop.AutoSize = true;
-            this.lblLop.Location = new System.Drawing.Point(50, 305);
+            this.lblLop.Location = new System.Drawing.Point(50, 335);
             this.lblLop.Name = "lblLop";
             this.lblLop.Size = new System.Drawing.Size(55, 15);
             this.lblLop.TabIndex = 12;
             this.lblLop.Text = "Lớp Học:";
+            // 
+            // txtNoiSinh
+            // 
+            this.txtNoiSinh.Location = new System.Drawing.Point(160, 246);
+            this.txtNoiSinh.Name = "txtNoiSinh";
+            this.txtNoiSinh.Size = new System.Drawing.Size(220, 23);
+            this.txtNoiSinh.TabIndex = 17;
+            // 
+            // lblNoiSinh
+            // 
+            this.lblNoiSinh.AutoSize = true;
+            this.lblNoiSinh.Location = new System.Drawing.Point(50, 249);
+            this.lblNoiSinh.Name = "lblNoiSinh";
+            this.lblNoiSinh.Size = new System.Drawing.Size(55, 15);
+            this.lblNoiSinh.TabIndex = 16;
+            this.lblNoiSinh.Text = "Nơi Sinh:";
             // 
             // frThemSV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(450, 430);
+            this.Controls.Add(this.txtNoiSinh);
+            this.Controls.Add(this.lblNoiSinh);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.cboLop);
@@ -234,5 +254,7 @@
         private System.Windows.Forms.ComboBox cboLop;
         private System.Windows.Forms.Button btnLuu, btnHuy;
         private System.Windows.Forms.Label lblMa, lblTen, lblNgaySinh, lblGioiTinh, lblDiaChi, lblLop;
+        private System.Windows.Forms.TextBox txtNoiSinh;
+        private System.Windows.Forms.Label lblNoiSinh;
     }
 }

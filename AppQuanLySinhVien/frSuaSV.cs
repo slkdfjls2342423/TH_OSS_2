@@ -39,6 +39,7 @@ namespace AppQuanLySinhVien
                 rbNam.Checked = true;
             else
                 rbNu.Checked = true;
+            txtNoiSinh.Text = sv.NoiSinh;
 
             foreach (DataRow item in lopCtr.LayDanhSachLop().Rows)
             {
@@ -73,17 +74,18 @@ namespace AppQuanLySinhVien
                 txtHoTen.Text,
                 dtpNgaySinh.Value,
                 rbNam.Checked ? "nam" : "nu",
+                txtNoiSinh.Text,
                 txtDiaChi.Text,
                 maLop
                 )) > 0)
             {
                 this.DialogResult = DialogResult.OK;
+                this.Close();
             }
             else
             {
                 this.DialogResult = DialogResult.None;
             }
-            this.Close();
         }
 
         private void btnHuy_Click(object sender, EventArgs e)

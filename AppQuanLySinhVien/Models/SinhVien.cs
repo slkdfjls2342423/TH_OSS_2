@@ -12,16 +12,18 @@ namespace AppQuanLySinhVien.Models
         public string HoTen { get; set; }
         public DateTime NgaySinh { get; set; }
         public string GioiTinh { get; set; }
+        public string NoiSinh { get; set; }
         public string DiaChi { get; set; }
         public string MaLop { get; set; }
         public Lop LopHoc { get; set; }
 
-        public SinhVien(string maSinhVien, string hoTen, DateTime ngaySinh, string gioiTinh, string diaChi, string maLop)
+        public SinhVien(string maSinhVien, string hoTen, DateTime ngaySinh, string gioiTinh, string NoiSinh, string diaChi, string maLop)
         {
             MaSinhVien = maSinhVien;
             HoTen = hoTen;
             NgaySinh = ngaySinh;
             GioiTinh = gioiTinh;
+            this.NoiSinh = NoiSinh;
             DiaChi = diaChi;
             MaLop = maLop;
         }

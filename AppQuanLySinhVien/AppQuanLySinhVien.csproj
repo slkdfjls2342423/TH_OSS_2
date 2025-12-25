@@ -77,6 +77,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frSuaSV.resx">
+      <DependentUpon>frSuaSV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frThemSV.resx">
       <DependentUpon>frThemSV.cs</DependentUpon>
     </EmbeddedResource>

@@ -54,6 +54,7 @@ namespace AppQuanLySinhVien
                 txtHoTen.Text,          // hoTen
                 dtpNgaySinh.Value,      // ngaySinh
                 rbNam.Checked?"nam":"nu",          // gioiTinh (True nếu chọn Nam)
+                txtNoiSinh.Text,        // noiSinh
                 txtDiaChi.Text,         // diaChi
                 maLopChon    // maLop (Lấy từ object Lop)
             );

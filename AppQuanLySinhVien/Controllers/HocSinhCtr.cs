@@ -56,6 +56,7 @@ namespace AppQuanLySinhVien.Controllers
                     HoTen = dr["HoTen"].ToString(),
                     NgaySinh = Convert.ToDateTime(dr["NgaySinh"]),
                     GioiTinh = dr["phai"].ToString(),
+                    NoiSinh = dr["NoiSinh"].ToString(),
                     DiaChi = dr["DiaChi"].ToString(),
                     MaLop = dr["MaLop"].ToString()
                 };
@@ -72,11 +73,12 @@ namespace AppQuanLySinhVien.Controllers
                 {
                     con.Open();
                 }
-                SqlCommand cmd = new SqlCommand("INSERT INTO SINHVIEN (MaSv, HoTen, NgaySinh, phai, DiaChi, MaLop) VALUES (@MaSinhVien, @HoTen, @NgaySinh, @GioiTinh, @DiaChi, @MaLop)", con);
+                SqlCommand cmd = new SqlCommand("INSERT INTO SINHVIEN (MaSv, HoTen, NgaySinh, phai, noisinh, DiaChi, MaLop) VALUES (@MaSinhVien, @HoTen, @NgaySinh, @GioiTinh, @NoiSinh, @DiaChi, @MaLop)", con);
                 cmd.Parameters.AddWithValue("@MaSinhVien", sinhVien.MaSinhVien);
                 cmd.Parameters.AddWithValue("@HoTen", sinhVien.HoTen);
                 cmd.Parameters.AddWithValue("@NgaySinh", sinhVien.NgaySinh);
                 cmd.Parameters.AddWithValue("@GioiTinh", sinhVien.GioiTinh);
+                cmd.Parameters.AddWithValue("@NoiSinh", sinhVien.NoiSinh);
                 cmd.Parameters.AddWithValue("@DiaChi", sinhVien.DiaChi);
                 cmd.Parameters.AddWithValue("@MaLop", sinhVien.MaLop);
                 int rowsAffected = cmd.ExecuteNonQuery();
@@ -93,7 +95,7 @@ namespace AppQuanLySinhVien.Controllers
             catch (Exception e)
             {
                 MessageBox.Show("Thêm học sinh thất bại: "+e.Message);
-                return 0;
+                return -1;
             }
         }
         public int XoaHocSinh(string maSinhVien)
@@ -117,10 +119,10 @@ namespace AppQuanLySinhVien.Controllers
                 }
                 return rowsAffected;
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                MessageBox.Show("Xóa học sinh thất bại!");
-                return 0;
+                MessageBox.Show("Xóa học sinh thất bại: "+e.Message);
+                return -1;
             }
         }
         public int SuaHocSinh(string maSinhVien, SinhVien sinhVien)
@@ -131,11 +133,12 @@ namespace AppQuanLySinhVien.Controllers
                 {
                     con.Open();
                 }
-                SqlCommand cmd = new SqlCommand("UPDATE SINHVIEN SET HoTen = @HoTen, NgaySinh = @NgaySinh, phai = @GioiTinh, DiaChi = @DiaChi, MaLop = @MaLop WHERE MaSV = @MaSinhVien", con);
+                SqlCommand cmd = new SqlCommand("UPDATE SINHVIEN SET HoTen = @HoTen, NgaySinh = @NgaySinh, phai = @GioiTinh, NoiSinh = @NoiSinh, DiaChi = @DiaChi, MaLop = @MaLop WHERE MaSV = @MaSinhVien", con);
                 cmd.Parameters.AddWithValue("@MaSinhVien", maSinhVien);
                 cmd.Parameters.AddWithValue("@HoTen", sinhVien.HoTen);
                 cmd.Parameters.AddWithValue("@NgaySinh", sinhVien.NgaySinh);
                 cmd.Parameters.AddWithValue("@GioiTinh", sinhVien.GioiTinh);
+                cmd.Parameters.AddWithValue("@NoiSinh", sinhVien.NoiSinh);
                 cmd.Parameters.AddWithValue("@DiaChi", sinhVien.DiaChi);
                 cmd.Parameters.AddWithValue("@MaLop", sinhVien.MaLop);
                 int rowsAffected = cmd.ExecuteNonQuery();
@@ -153,7 +156,7 @@ namespace AppQuanLySinhVien.Controllers
             catch (Exception e)
             {
                 MessageBox.Show("Cập nhật học sinh thất bại!: "+e.Message);
-                return 0;
+                return -1;
             }
         }
     }
