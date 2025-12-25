@@ -53,7 +53,7 @@ namespace AppQuanLySinhVien.Controllers
                 SinhVien sv = new SinhVien()
                 {
                     MaSinhVien = dr["MaSV"].ToString(),
-                    HoTen = dr["Ten"].ToString(),
+                    HoTen = dr["HoTen"].ToString(),
                     NgaySinh = Convert.ToDateTime(dr["NgaySinh"]),
                     GioiTinh = dr["phai"].ToString(),
                     DiaChi = dr["DiaChi"].ToString(),
