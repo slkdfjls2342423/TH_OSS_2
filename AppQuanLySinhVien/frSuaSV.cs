@@ -57,6 +57,11 @@ namespace AppQuanLySinhVien
                 MessageBox.Show("Vui lòng nhập đầy đủ Mã SV và Họ Tên!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            if (DateTime.Now.Year - dtpNgaySinh.Value.Year < 15)
+            {
+                MessageBox.Show("không đủ điều kiện nhập học (tuổi > 15 tính theo năm)");
+                return;
+            }
             string maLop = cboLop.SelectedValue.ToString();
             if(maLop == null)
             {
