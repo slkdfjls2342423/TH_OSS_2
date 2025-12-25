@@ -45,5 +45,22 @@ namespace AppQuanLySinhVien
             rowSelected = dgvMonHoc.CurrentRow.Index;
             MessageBox.Show(rowSelected.ToString());
         }
+
+        private void btnThemMon_Click(object sender, EventArgs e)
+        {
+            frThemMH fr = new frThemMH();
+            fr.ShowDialog();
+        
+        }
+
+        private void btnSuaMon_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnXoaMon_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
