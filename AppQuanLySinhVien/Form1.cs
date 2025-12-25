@@ -84,6 +84,11 @@ namespace AppQuanLySinhVien
         {
             frThemSV fr = new frThemSV();
             fr.ShowDialog();
+            if (fr.DialogResult == DialogResult.OK)
+            {
+                dgvHocSinh.DataSource = hocSinhCtr.LayDanhSachHocSinh();
+                rowIndex = -1;
+            }
         }
 
         private void btnSuaHocSinh_Click(object sender, EventArgs e)
