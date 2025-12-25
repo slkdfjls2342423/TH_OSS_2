@@ -18,10 +18,10 @@ namespace AppQuanLySinhVien
         private HocSinhCtr hocSinhCtr;
         private MonHocCtr monHocCtr;
         private int rowSelected;
-   
+
         private int rowIndexMH = -1;
         private string maMH = "";
-     
+
 
         public Form1()
         {
@@ -48,16 +48,16 @@ namespace AppQuanLySinhVien
         private void dgvMonHoc_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             rowSelected = dgvMonHoc.CurrentRow.Index;
-           
+
             MessageBox.Show(rowSelected.ToString());
             if (e.RowIndex >= 0)
             {
                 rowIndexMH = e.RowIndex;
 
-                // Lấy mã lớp từ cột MaLop
+
                 maMH = dgvMonHoc.Rows[rowIndexMH].Cells[0].Value.ToString();
 
-        
+
             }
         }
 
@@ -65,7 +65,7 @@ namespace AppQuanLySinhVien
         {
             frThemMH fr = new frThemMH();
             fr.ShowDialog();
-        
+
         }
 
         private void btnSuaMon_Click(object sender, EventArgs e)
@@ -74,7 +74,7 @@ namespace AppQuanLySinhVien
             {
                 frSuaMH fr = new frSuaMH(maMH);
                 fr.ShowDialog();
-                
+
                 if (fr.DialogResult == DialogResult.OK)
                 {
                     dgvMonHoc.DataSource = monHocCtr.LayDanhSachMonHoc();
@@ -89,7 +89,25 @@ namespace AppQuanLySinhVien
 
         private void btnXoaMon_Click(object sender, EventArgs e)
         {
+            if (rowIndexMH >= 0)
+            {
+                DialogResult confirm = MessageBox.Show("Bạn có chắc chắn muốn xóa môn học: " + maMH + "?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
+                if (confirm == DialogResult.Yes)
+                {
+                    int result = monHocCtr.XoaMonHoc(maMH);
+                    if (result > 0)
+                    {
+                        dgvMonHoc.DataSource = monHocCtr.LayDanhSachMonHoc();
+                        rowIndexMH = -1;
+                        maMH = "";
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn một môn học để xóa.", "Thông báo");
+            }
         }
     }
 }

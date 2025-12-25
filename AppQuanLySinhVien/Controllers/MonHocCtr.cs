@@ -124,5 +124,36 @@ namespace AppQuanLySinhVien.Controllers
                 return false;
             }
         }
+        public int XoaMonHoc(string maMH)
+        {
+            try
+            {
+                if (con.State == ConnectionState.Closed) con.Open();
+
+                // Cột MAMH
+                SqlCommand cmd = new SqlCommand("DELETE FROM MONHOC WHERE MAMH = @MaMH", con);
+                cmd.Parameters.AddWithValue("@MaMH", maMH);
+
+                int rows = cmd.ExecuteNonQuery();
+                if (rows > 0) MessageBox.Show("Xóa thành công!");
+                else MessageBox.Show("Không tìm thấy mã môn để xóa!");
+
+                return rows;
+            }
+            catch (SqlException sqlEx)
+            {
+                if (sqlEx.Number == 547)
+                    MessageBox.Show("Không thể xóa vì môn học này đang có dữ liệu liên quan!");
+                else
+                    MessageBox.Show("Lỗi SQL: " + sqlEx.Message);
+                return 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+                return 0;
+            }
+        }
+
     }
 }
