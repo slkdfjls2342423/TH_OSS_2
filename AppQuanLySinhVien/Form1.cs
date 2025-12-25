@@ -18,6 +18,8 @@ namespace AppQuanLySinhVien
         private HocSinhCtr hocSinhCtr;
         private LopCtr lopCtr;
         private int rowSelected;
+        private int rowIndex = -1;
+        private string maLop = "";
         public Form1()
         {
             InitializeComponent();
@@ -36,7 +38,7 @@ namespace AppQuanLySinhVien
             
         }
       
-
+        //Lam moi form Lop
         private void btnReloadLop_Click(object sender, EventArgs e)
         {
             dgvLop.DataSource = lopCtr.LayDanhSachLop();
@@ -46,6 +48,34 @@ namespace AppQuanLySinhVien
         {
             rowSelected = dgvLop.CurrentRow.Index;
             MessageBox.Show(rowSelected.ToString());
+            if (e.RowIndex >= 0)
+            {
+                rowIndex = e.RowIndex;
+
+                // Lấy mã lớp từ cột MaLop
+                maLop = dgvLop.Rows[rowIndex].Cells["MaLop"].Value.ToString();
+
+                MessageBox.Show("Đã chọn lớp: " + maLop);
+            }
+        }
+
+        private void btnXoaLop_Click(object sender, EventArgs e)
+        {
+            if(rowIndex >= 0)
+            {
+                int result = lopCtr.XoaLop(maLop);
+                if(result >0)
+                {
+                    dgvLop.DataSource = lopCtr.LayDanhSachLop();
+                    rowIndex = -1;
+                    maLop = "";
+                }
+                else
+                {
+                    MessageBox.Show("Vui long chon mot lop de xoa");
+                }
+            }
         }
     }
-}
+    }
+

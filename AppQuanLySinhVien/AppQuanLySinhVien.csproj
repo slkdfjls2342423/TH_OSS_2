@@ -50,15 +50,19 @@
   <ItemGroup>
     <Compile Include="Controllers\HocSinhCtr.cs" />
     <Compile Include="Controllers\LopCtr.cs" />
-    <Compile Include="Controllers\MonHocCtr.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frThemLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frThemLop.Designer.cs">
+      <DependentUpon>frThemLop.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Lop.cs" />
-    <Compile Include="Models\MonHoc.cs" />
     <Compile Include="Models\SinhVien.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

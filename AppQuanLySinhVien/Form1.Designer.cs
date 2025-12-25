@@ -59,7 +59,7 @@
             this.tabControlMain.Controls.Add(this.tabPageMonHoc);
             this.tabControlMain.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.tabControlMain.Location = new System.Drawing.Point(16, 102);
-            this.tabControlMain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControlMain.Margin = new System.Windows.Forms.Padding(4);
             this.tabControlMain.Name = "tabControlMain";
             this.tabControlMain.SelectedIndex = 0;
             this.tabControlMain.Size = new System.Drawing.Size(1320, 620);
@@ -75,7 +75,7 @@
             this.tabPageHocSinh.Controls.Add(this.lblTitleHocSinh);
             this.tabPageHocSinh.Controls.Add(this.dgvHocSinh);
             this.tabPageHocSinh.Location = new System.Drawing.Point(4, 32);
-            this.tabPageHocSinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPageHocSinh.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageHocSinh.Name = "tabPageHocSinh";
             this.tabPageHocSinh.Size = new System.Drawing.Size(1312, 584);
             this.tabPageHocSinh.TabIndex = 0;
@@ -87,7 +87,7 @@
             this.btnReloadHocSinh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReloadHocSinh.ForeColor = System.Drawing.Color.White;
             this.btnReloadHocSinh.Location = new System.Drawing.Point(1121, 353);
-            this.btnReloadHocSinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReloadHocSinh.Margin = new System.Windows.Forms.Padding(4);
             this.btnReloadHocSinh.Name = "btnReloadHocSinh";
             this.btnReloadHocSinh.Size = new System.Drawing.Size(184, 80);
             this.btnReloadHocSinh.TabIndex = 3;
@@ -97,7 +97,7 @@
             // btnXoaHocSinh
             // 
             this.btnXoaHocSinh.Location = new System.Drawing.Point(1121, 266);
-            this.btnXoaHocSinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnXoaHocSinh.Margin = new System.Windows.Forms.Padding(4);
             this.btnXoaHocSinh.Name = "btnXoaHocSinh";
             this.btnXoaHocSinh.Size = new System.Drawing.Size(184, 80);
             this.btnXoaHocSinh.TabIndex = 2;
@@ -106,7 +106,7 @@
             // btnSuaHocSinh
             // 
             this.btnSuaHocSinh.Location = new System.Drawing.Point(1121, 178);
-            this.btnSuaHocSinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSuaHocSinh.Margin = new System.Windows.Forms.Padding(4);
             this.btnSuaHocSinh.Name = "btnSuaHocSinh";
             this.btnSuaHocSinh.Size = new System.Drawing.Size(184, 80);
             this.btnSuaHocSinh.TabIndex = 1;
@@ -115,7 +115,7 @@
             // btnThemHocSinh
             // 
             this.btnThemHocSinh.Location = new System.Drawing.Point(1121, 91);
-            this.btnThemHocSinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnThemHocSinh.Margin = new System.Windows.Forms.Padding(4);
             this.btnThemHocSinh.Name = "btnThemHocSinh";
             this.btnThemHocSinh.Size = new System.Drawing.Size(184, 80);
             this.btnThemHocSinh.TabIndex = 0;
@@ -140,7 +140,7 @@
             this.dgvHocSinh.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvHocSinh.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvHocSinh.Location = new System.Drawing.Point(20, 91);
-            this.dgvHocSinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvHocSinh.Margin = new System.Windows.Forms.Padding(4);
             this.dgvHocSinh.Name = "dgvHocSinh";
             this.dgvHocSinh.Size = new System.Drawing.Size(1093, 455);
             this.dgvHocSinh.TabIndex = 1;
@@ -155,7 +155,7 @@
             this.tabPageLop.Controls.Add(this.lblTitleLop);
             this.tabPageLop.Controls.Add(this.dgvLop);
             this.tabPageLop.Location = new System.Drawing.Point(4, 32);
-            this.tabPageLop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPageLop.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageLop.Name = "tabPageLop";
             this.tabPageLop.Size = new System.Drawing.Size(1312, 584);
             this.tabPageLop.TabIndex = 1;
@@ -167,7 +167,7 @@
             this.btnReloadLop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReloadLop.ForeColor = System.Drawing.Color.White;
             this.btnReloadLop.Location = new System.Drawing.Point(1121, 353);
-            this.btnReloadLop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReloadLop.Margin = new System.Windows.Forms.Padding(4);
             this.btnReloadLop.Name = "btnReloadLop";
             this.btnReloadLop.Size = new System.Drawing.Size(184, 80);
             this.btnReloadLop.TabIndex = 3;
@@ -178,7 +178,7 @@
             // btnSuaLop
             // 
             this.btnSuaLop.Location = new System.Drawing.Point(1121, 178);
-            this.btnSuaLop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSuaLop.Margin = new System.Windows.Forms.Padding(4);
             this.btnSuaLop.Name = "btnSuaLop";
             this.btnSuaLop.Size = new System.Drawing.Size(184, 80);
             this.btnSuaLop.TabIndex = 1;
@@ -187,7 +187,7 @@
             // btnThemLop
             // 
             this.btnThemLop.Location = new System.Drawing.Point(1121, 91);
-            this.btnThemLop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnThemLop.Margin = new System.Windows.Forms.Padding(4);
             this.btnThemLop.Name = "btnThemLop";
             this.btnThemLop.Size = new System.Drawing.Size(184, 80);
             this.btnThemLop.TabIndex = 0;
@@ -196,11 +196,12 @@
             // btnXoaLop
             // 
             this.btnXoaLop.Location = new System.Drawing.Point(1121, 266);
-            this.btnXoaLop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnXoaLop.Margin = new System.Windows.Forms.Padding(4);
             this.btnXoaLop.Name = "btnXoaLop";
             this.btnXoaLop.Size = new System.Drawing.Size(184, 80);
             this.btnXoaLop.TabIndex = 2;
             this.btnXoaLop.Text = "Xóa";
+            this.btnXoaLop.Click += new System.EventHandler(this.btnXoaLop_Click);
             // 
             // lblTitleLop
             // 
@@ -221,7 +222,7 @@
             this.dgvLop.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvLop.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvLop.Location = new System.Drawing.Point(20, 91);
-            this.dgvLop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvLop.Margin = new System.Windows.Forms.Padding(4);
             this.dgvLop.Name = "dgvLop";
             this.dgvLop.Size = new System.Drawing.Size(1093, 455);
             this.dgvLop.TabIndex = 1;
@@ -237,7 +238,7 @@
             this.tabPageMonHoc.Controls.Add(this.lblTitleMon);
             this.tabPageMonHoc.Controls.Add(this.dgvMonHoc);
             this.tabPageMonHoc.Location = new System.Drawing.Point(4, 32);
-            this.tabPageMonHoc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPageMonHoc.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageMonHoc.Name = "tabPageMonHoc";
             this.tabPageMonHoc.Size = new System.Drawing.Size(1312, 584);
             this.tabPageMonHoc.TabIndex = 2;
@@ -249,7 +250,7 @@
             this.btnReloadMon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReloadMon.ForeColor = System.Drawing.Color.White;
             this.btnReloadMon.Location = new System.Drawing.Point(1121, 353);
-            this.btnReloadMon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReloadMon.Margin = new System.Windows.Forms.Padding(4);
             this.btnReloadMon.Name = "btnReloadMon";
             this.btnReloadMon.Size = new System.Drawing.Size(184, 80);
             this.btnReloadMon.TabIndex = 3;
@@ -259,7 +260,7 @@
             // btnXoaMon
             // 
             this.btnXoaMon.Location = new System.Drawing.Point(1121, 266);
-            this.btnXoaMon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnXoaMon.Margin = new System.Windows.Forms.Padding(4);
             this.btnXoaMon.Name = "btnXoaMon";
             this.btnXoaMon.Size = new System.Drawing.Size(184, 80);
             this.btnXoaMon.TabIndex = 2;
@@ -268,7 +269,7 @@
             // btnSuaMon
             // 
             this.btnSuaMon.Location = new System.Drawing.Point(1121, 178);
-            this.btnSuaMon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSuaMon.Margin = new System.Windows.Forms.Padding(4);
             this.btnSuaMon.Name = "btnSuaMon";
             this.btnSuaMon.Size = new System.Drawing.Size(184, 80);
             this.btnSuaMon.TabIndex = 1;
@@ -277,7 +278,7 @@
             // btnThemMon
             // 
             this.btnThemMon.Location = new System.Drawing.Point(1121, 91);
-            this.btnThemMon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnThemMon.Margin = new System.Windows.Forms.Padding(4);
             this.btnThemMon.Name = "btnThemMon";
             this.btnThemMon.Size = new System.Drawing.Size(184, 80);
             this.btnThemMon.TabIndex = 0;
@@ -302,7 +303,7 @@
             this.dgvMonHoc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMonHoc.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvMonHoc.Location = new System.Drawing.Point(20, 91);
-            this.dgvMonHoc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvMonHoc.Margin = new System.Windows.Forms.Padding(4);
             this.dgvMonHoc.Name = "dgvMonHoc";
             this.dgvMonHoc.Size = new System.Drawing.Size(1093, 455);
             this.dgvMonHoc.TabIndex = 1;
@@ -328,7 +329,7 @@
             this.ClientSize = new System.Drawing.Size(1352, 737);
             this.Controls.Add(this.tabControlMain);
             this.Controls.Add(this.lblHeader);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lý Sinh Viên Pro - Dashboard";
