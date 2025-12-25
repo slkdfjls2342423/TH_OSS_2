@@ -183,6 +183,7 @@
             this.btnSuaLop.Size = new System.Drawing.Size(184, 80);
             this.btnSuaLop.TabIndex = 1;
             this.btnSuaLop.Text = "Sửa";
+            this.btnSuaLop.Click += new System.EventHandler(this.btnSuaLop_Click);
             // 
             // btnThemLop
             // 

@@ -79,6 +79,25 @@ namespace AppQuanLySinhVien
             frThemLop fr = new frThemLop();
             fr.ShowDialog();
         }
+
+        private void btnSuaLop_Click(object sender, EventArgs e)
+        {
+            if (rowIndex >= 0)
+            {
+                frSuaLop fr = new frSuaLop(maLop);
+                fr.ShowDialog();
+                if (fr.DialogResult == DialogResult.OK)
+                {
+                    dgvLop.DataSource = lopCtr.LayDanhSachLop();
+                    rowIndex = -1;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn một lop để sửa.");
+            }
+
+        }
     }
     }
 
