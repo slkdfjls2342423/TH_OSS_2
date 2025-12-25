@@ -59,7 +59,6 @@ namespace AppQuanLySinhVien.Controllers
                     DiaChi = dr["DiaChi"].ToString(),
                     MaLop = dr["MaLop"].ToString()
                 };
-                MessageBox.Show(sv.ToString());
                 return sv;
             }
             MessageBox.Show("Không tìm thấy sinh viên với mã: " + MaSV);
@@ -121,6 +120,39 @@ namespace AppQuanLySinhVien.Controllers
             catch (Exception)
             {
                 MessageBox.Show("Xóa học sinh thất bại!");
+                return 0;
+            }
+        }
+        public int SuaHocSinh(string maSinhVien, SinhVien sinhVien)
+        {
+            try
+            {
+                if (con.State == System.Data.ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+                SqlCommand cmd = new SqlCommand("UPDATE SINHVIEN SET Ten = @HoTen, NgaySinh = @NgaySinh, phai = @GioiTinh, DiaChi = @DiaChi, MaLop = @MaLop WHERE MaSV = @MaSinhVien", con);
+                cmd.Parameters.AddWithValue("@MaSinhVien", maSinhVien);
+                cmd.Parameters.AddWithValue("@HoTen", sinhVien.HoTen);
+                cmd.Parameters.AddWithValue("@NgaySinh", sinhVien.NgaySinh);
+                cmd.Parameters.AddWithValue("@GioiTinh", sinhVien.GioiTinh);
+                cmd.Parameters.AddWithValue("@DiaChi", sinhVien.DiaChi);
+                cmd.Parameters.AddWithValue("@MaLop", sinhVien.MaLop);
+                int rowsAffected = cmd.ExecuteNonQuery();
+                if (rowsAffected != 0)
+                {
+                    MessageBox.Show("Cập nhật học sinh thành công!");
+                }
+                else
+                {
+                    MessageBox.Show("Cập nhật học sinh thất bại!");
+
+                }
+                return rowsAffected;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Cập nhật học sinh thất bại!: "+e.Message);
                 return 0;
             }
         }

@@ -16,11 +16,14 @@ namespace AppQuanLySinhVien
     {
         private HocSinhCtr hocSinhCtr;
         private LopCtr lopCtr;
+        private string maSV;
         // Constructor nhận vào một đối tượng SinhVien hoặc DataRow để đổ dữ liệu
-        public frSuaSV(SinhVien sv)
+        public frSuaSV(string maSV)
         {
+            this.maSV = maSV;
             hocSinhCtr = new HocSinhCtr(Program.connectionString);
             lopCtr = new LopCtr(Program.connectionString);
+            SinhVien sv = hocSinhCtr.Get(maSV);
             InitializeComponent();
             cboLop.DataSource = lopCtr.LayDanhSachLop();
             cboLop.DisplayMember = "TenLop"; // Hiển thị tên lớp
@@ -49,11 +52,32 @@ namespace AppQuanLySinhVien
 
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
-            // Thực hiện câu lệnh SQL UPDATE tại đây
-            // string sql = "UPDATE SinhVien SET HoTen = ..., NgaySinh = ... WHERE MaSinhVien = '" + txtMaSV.Text + "'";
-
-            MessageBox.Show("Cập nhật thành công!");
-            this.DialogResult = DialogResult.OK;
+            if (string.IsNullOrWhiteSpace(txtMaSV.Text) || string.IsNullOrWhiteSpace(txtHoTen.Text))
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ Mã SV và Họ Tên!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            string maLop = cboLop.SelectedValue.ToString();
+            if(maLop == null)
+            {
+                MessageBox.Show("Vui lòng chọn lớp học!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if(hocSinhCtr.SuaHocSinh(maSV, new SinhVien(
+                txtMaSV.Text,
+                txtHoTen.Text,
+                dtpNgaySinh.Value,
+                rbNam.Checked ? "nam" : "nu",
+                txtDiaChi.Text,
+                maLop
+                )) > 0)
+            {
+                this.DialogResult = DialogResult.OK;
+            }
+            else
+            {
+                this.DialogResult = DialogResult.None;
+            }
             this.Close();
         }
 

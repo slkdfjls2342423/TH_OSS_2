@@ -61,7 +61,6 @@ namespace AppQuanLySinhVien
         {
             rowIndex = e.RowIndex;
             maSinhVien = dgvHocSinh.Rows[rowIndex].Cells["MaSV"].Value.ToString();
-            MessageBox.Show("Row index: " + rowIndex+ "mssv: "+maSinhVien);
         }
 
         private void btnXoaHocSinh_Click(object sender, EventArgs e)
@@ -91,8 +90,13 @@ namespace AppQuanLySinhVien
         {
             if (rowIndex >= 0)
             {
-                frSuaSV fr = new frSuaSV(hocSinhCtr.Get(maSinhVien));
+                frSuaSV fr = new frSuaSV(maSinhVien);
                 fr.ShowDialog();
+                if (fr.DialogResult == DialogResult.OK)
+                {
+                    dgvHocSinh.DataSource = hocSinhCtr.LayDanhSachHocSinh();
+                    rowIndex = -1;
+                }
             }
             else
             {
