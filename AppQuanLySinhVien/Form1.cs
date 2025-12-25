@@ -37,8 +37,6 @@ namespace AppQuanLySinhVien
 
             
         }
-      
-        //Lam moi form Lop
         private void btnReloadLop_Click(object sender, EventArgs e)
         {
             dgvLop.DataSource = lopCtr.LayDanhSachLop();
@@ -58,7 +56,6 @@ namespace AppQuanLySinhVien
                 MessageBox.Show("Đã chọn lớp: " + maLop);
             }
         }
-
         private void btnXoaLop_Click(object sender, EventArgs e)
         {
             if(rowIndex >= 0)
