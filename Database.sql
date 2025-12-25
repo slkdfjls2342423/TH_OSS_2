@@ -57,11 +57,10 @@ BEGIN
         WHEN 2 THEN 'Cuong'
         ELSE 'Dung' END;
 
-    INSERT INTO [dbo].[SINHVIEN] ([MASV], [HO], [TEN], [NGAYSINH], [PHAI], [NOISINH], [DIACHI], [NGHIHOC], [MALOP])
+    INSERT INTO [dbo].[SINHVIEN] ([MASV], [HOTEN], [NGAYSINH], [PHAI], [NOISINH], [DIACHI], [NGHIHOC], [MALOP])
     VALUES (
         'SV' + RIGHT('000' + CAST(@i AS VARCHAR(3)), 3), 
-        @Ho, 
-        @Ten + CAST(@i AS VARCHAR(3)), 
+        @Ho +' '+ @Ten, 
         DATEADD(DAY, -(RAND()*365*5 + 18*365), GETDATE()), -- Độ tuổi SV 18-23
         @Phai, 
         'TP. Ho Chi Minh', 
