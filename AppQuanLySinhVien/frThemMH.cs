@@ -43,10 +43,7 @@ namespace AppQuanLySinhVien
                     MessageBox.Show("Thêm môn học thành công!", "Thông báo");
                     this.Close();
                 }
-                else
-                {
-                    MessageBox.Show("Thêm thất bại (Có thể trùng mã hoặc lỗi SQL).");
-                }
+            
             }
             catch (Exception ex)
             {
