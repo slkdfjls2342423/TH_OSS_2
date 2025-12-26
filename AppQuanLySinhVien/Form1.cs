@@ -45,15 +45,15 @@ namespace AppQuanLySinhVien
         private void dgvLop_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             rowSelected = dgvLop.CurrentRow.Index;
-            MessageBox.Show(rowSelected.ToString());
+          
             if (e.RowIndex >= 0)
             {
                 rowIndex = e.RowIndex;
 
-                // Lấy mã lớp từ cột MaLop
+            
                 maLop = dgvLop.Rows[rowIndex].Cells["MaLop"].Value.ToString();
 
-                MessageBox.Show("Đã chọn lớp: " + maLop);
+               
             }
         }
         private void btnXoaLop_Click(object sender, EventArgs e)
