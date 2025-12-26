@@ -48,10 +48,7 @@ namespace AppQuanLySinhVien
                     MessageBox.Show("Thêm lớp học thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close(); // Đóng form sau khi lưu thành công
                 }
-                else
-                {
-                    MessageBox.Show("Thêm lớp thất bại! (Có thể Mã lớp đã tồn tại)", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+              
             }
             catch (Exception ex)
             {
