@@ -16,10 +16,14 @@ namespace AppQuanLySinhVien
     {
         private SqlConnection con;
         private HocSinhCtr hocSinhCtr;
+        private string maSinhVien = "";
+        private int rowIndex = -1;
+
         private LopCtr lopCtr;
         private int rowSelected;
-        private int rowIndex = -1;
+
         private string maLop = "";
+
         public Form1()
         {
             InitializeComponent();
@@ -97,6 +101,64 @@ namespace AppQuanLySinhVien
             else
             {
                 MessageBox.Show("Vui lòng chọn một lop để sửa.");
+            }
+
+        }
+
+        private void btnReloadHocSinh_Click(object sender, EventArgs e)
+        {
+            dgvHocSinh.DataSource = hocSinhCtr.LayDanhSachHocSinh();
+        }
+
+        private void dgvHocSinh_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            rowIndex = e.RowIndex;
+            maSinhVien = dgvHocSinh.Rows[rowIndex].Cells["MaSV"].Value.ToString();
+        }
+
+        private void btnXoaHocSinh_Click(object sender, EventArgs e)
+        {
+            if(rowIndex >= 0)
+            {
+                int result = hocSinhCtr.XoaHocSinh(maSinhVien);
+                if (result > 0)
+                {
+                    dgvHocSinh.DataSource = hocSinhCtr.LayDanhSachHocSinh();
+                    rowIndex = -1;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn một học sinh để xóa.");
+            }
+        }
+
+        private void btnThemHocSinh_Click(object sender, EventArgs e)
+        {
+            frThemSV fr = new frThemSV();
+            fr.ShowDialog();
+            if (fr.DialogResult == DialogResult.OK)
+            {
+                dgvHocSinh.DataSource = hocSinhCtr.LayDanhSachHocSinh();
+                rowIndex = -1;
+            }
+        }
+
+        private void btnSuaHocSinh_Click(object sender, EventArgs e)
+        {
+            if (rowIndex >= 0)
+            {
+                frSuaSV fr = new frSuaSV(maSinhVien);
+                fr.ShowDialog();
+                if (fr.DialogResult == DialogResult.OK)
+                {
+                    dgvHocSinh.DataSource = hocSinhCtr.LayDanhSachHocSinh();
+                    rowIndex = -1;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn một học sinh để sửa.");
             }
 
         }

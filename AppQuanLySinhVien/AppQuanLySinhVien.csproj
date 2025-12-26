@@ -68,6 +68,18 @@
     </Compile>
     <Compile Include="frThemLop.Designer.cs">
       <DependentUpon>frThemLop.cs</DependentUpon>
+	</Compile>
+	<Compile Include="frSuaSV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frSuaSV.Designer.cs">
+      <DependentUpon>frSuaSV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frThemSV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frThemSV.Designer.cs">
+      <DependentUpon>frThemSV.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Lop.cs" />
     <Compile Include="Models\SinhVien.cs" />
@@ -75,6 +87,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frSuaSV.resx">
+      <DependentUpon>frSuaSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frThemSV.resx">
+      <DependentUpon>frThemSV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
