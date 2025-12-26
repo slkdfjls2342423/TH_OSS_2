@@ -78,6 +78,7 @@ namespace AppQuanLySinhVien
         {
             frThemLop fr = new frThemLop();
             fr.ShowDialog();
+            dgvLop.DataSource = lopCtr.LayDanhSachLop();
         }
 
         private void btnSuaLop_Click(object sender, EventArgs e)
