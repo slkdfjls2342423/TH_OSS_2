@@ -78,7 +78,7 @@ namespace AppQuanLySinhVien
         {
             frThemLop fr = new frThemLop();
             fr.ShowDialog();
-            dgvLop.DataSource = lopCtr.LayDanhSachLop();
+            dgvLop.DataSource = lopCtr.LayDanhSachLop();//them lam moi
         }
 
         private void btnSuaLop_Click(object sender, EventArgs e)
@@ -87,9 +87,10 @@ namespace AppQuanLySinhVien
             {
                 frSuaLop fr = new frSuaLop(maLop);
                 fr.ShowDialog();
+                dgvLop.DataSource = lopCtr.LayDanhSachLop();
                 if (fr.DialogResult == DialogResult.OK)
                 {
-                    dgvLop.DataSource = lopCtr.LayDanhSachLop();
+                   
                     rowIndex = -1;
                 }
             }
