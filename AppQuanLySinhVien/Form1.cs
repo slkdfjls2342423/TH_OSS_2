@@ -48,8 +48,6 @@ namespace AppQuanLySinhVien
         private void dgvMonHoc_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             rowSelected = dgvMonHoc.CurrentRow.Index;
-
-            MessageBox.Show(rowSelected.ToString());
             if (e.RowIndex >= 0)
             {
                 rowIndexMH = e.RowIndex;
@@ -65,6 +63,7 @@ namespace AppQuanLySinhVien
         {
             frThemMH fr = new frThemMH();
             fr.ShowDialog();
+            dgvMonHoc.DataSource = monHocCtr.LayDanhSachMonHoc();
 
         }
 
@@ -74,10 +73,10 @@ namespace AppQuanLySinhVien
             {
                 frSuaMH fr = new frSuaMH(maMH);
                 fr.ShowDialog();
-
+                dgvMonHoc.DataSource = monHocCtr.LayDanhSachMonHoc();
                 if (fr.DialogResult == DialogResult.OK)
                 {
-                    dgvMonHoc.DataSource = monHocCtr.LayDanhSachMonHoc();
+                
                     rowIndexMH = -1;
                 }
             }
