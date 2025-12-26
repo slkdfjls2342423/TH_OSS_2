@@ -68,8 +68,8 @@
     </Compile>
     <Compile Include="frThemLop.Designer.cs">
       <DependentUpon>frThemLop.cs</DependentUpon>
-	</Compile>
-	<Compile Include="frSuaSV.cs">
+    </Compile>
+    <Compile Include="frSuaSV.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frSuaSV.Designer.cs">
@@ -81,10 +81,23 @@
     <Compile Include="frThemSV.Designer.cs">
       <DependentUpon>frThemSV.cs</DependentUpon>
     </Compile>
+    <Compile Include="frSuaMH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frSuaMH.Designer.cs">
+      <DependentUpon>frSuaMH.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Lop.cs" />
+    <Compile Include="Models\MonHoc.cs" />
     <Compile Include="Models\SinhVien.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="frThemMH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frThemMH.Designer.cs">
+      <DependentUpon>frThemMH.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -93,6 +106,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frThemSV.resx">
       <DependentUpon>frThemSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frSuaMH.resx">
+      <DependentUpon>frSuaMH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frThemMH.resx">
+      <DependentUpon>frThemMH.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -113,9 +132,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

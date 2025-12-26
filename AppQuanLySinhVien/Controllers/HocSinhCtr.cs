@@ -13,6 +13,7 @@ namespace AppQuanLySinhVien.Controllers
     public class HocSinhCtr
     {
         private SqlConnection con;
+
         public HocSinhCtr(string connectionString)
         {
             con = new SqlConnection(connectionString);

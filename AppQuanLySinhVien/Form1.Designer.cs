@@ -58,9 +58,8 @@
             this.tabControlMain.Controls.Add(this.tabPageLop);
             this.tabControlMain.Controls.Add(this.tabPageMonHoc);
             this.tabControlMain.Font = new System.Drawing.Font("Segoe UI", 10F);
-
-            this.tabControlMain.Location = new System.Drawing.Point(12, 83);
-
+            this.tabControlMain.Location = new System.Drawing.Point(9, 67);
+            this.tabControlMain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabControlMain.Name = "tabControlMain";
             this.tabControlMain.SelectedIndex = 0;
             this.tabControlMain.Size = new System.Drawing.Size(990, 504);
@@ -75,9 +74,8 @@
             this.tabPageHocSinh.Controls.Add(this.btnThemHocSinh);
             this.tabPageHocSinh.Controls.Add(this.lblTitleHocSinh);
             this.tabPageHocSinh.Controls.Add(this.dgvHocSinh);
-
             this.tabPageHocSinh.Location = new System.Drawing.Point(4, 26);
-
+            this.tabPageHocSinh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPageHocSinh.Name = "tabPageHocSinh";
             this.tabPageHocSinh.Size = new System.Drawing.Size(982, 474);
             this.tabPageHocSinh.TabIndex = 0;
@@ -88,9 +86,8 @@
             this.btnReloadHocSinh.BackColor = System.Drawing.Color.Gray;
             this.btnReloadHocSinh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReloadHocSinh.ForeColor = System.Drawing.Color.White;
-
-            this.btnReloadHocSinh.Location = new System.Drawing.Point(841, 287);
-
+            this.btnReloadHocSinh.Location = new System.Drawing.Point(835, 267);
+            this.btnReloadHocSinh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnReloadHocSinh.Name = "btnReloadHocSinh";
             this.btnReloadHocSinh.Size = new System.Drawing.Size(138, 65);
             this.btnReloadHocSinh.TabIndex = 3;
@@ -100,9 +97,8 @@
             // 
             // btnXoaHocSinh
             // 
-
-            this.btnXoaHocSinh.Location = new System.Drawing.Point(841, 216);
-
+            this.btnXoaHocSinh.Location = new System.Drawing.Point(835, 198);
+            this.btnXoaHocSinh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnXoaHocSinh.Name = "btnXoaHocSinh";
             this.btnXoaHocSinh.Size = new System.Drawing.Size(138, 65);
             this.btnXoaHocSinh.TabIndex = 2;
@@ -111,9 +107,8 @@
             // 
             // btnSuaHocSinh
             // 
-
-            this.btnSuaHocSinh.Location = new System.Drawing.Point(841, 145);
-
+            this.btnSuaHocSinh.Location = new System.Drawing.Point(835, 129);
+            this.btnSuaHocSinh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSuaHocSinh.Name = "btnSuaHocSinh";
             this.btnSuaHocSinh.Size = new System.Drawing.Size(138, 65);
             this.btnSuaHocSinh.TabIndex = 1;
@@ -122,9 +117,8 @@
             // 
             // btnThemHocSinh
             // 
-
-            this.btnThemHocSinh.Location = new System.Drawing.Point(841, 74);
-
+            this.btnThemHocSinh.Location = new System.Drawing.Point(835, 60);
+            this.btnThemHocSinh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnThemHocSinh.Name = "btnThemHocSinh";
             this.btnThemHocSinh.Size = new System.Drawing.Size(138, 65);
             this.btnThemHocSinh.TabIndex = 0;
@@ -148,9 +142,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvHocSinh.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvHocSinh.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-
-            this.dgvHocSinh.Location = new System.Drawing.Point(15, 74);
-
+            this.dgvHocSinh.Location = new System.Drawing.Point(11, 60);
+            this.dgvHocSinh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvHocSinh.Name = "dgvHocSinh";
             this.dgvHocSinh.Size = new System.Drawing.Size(820, 370);
             this.dgvHocSinh.TabIndex = 1;
@@ -165,9 +158,8 @@
             this.tabPageLop.Controls.Add(this.btnXoaLop);
             this.tabPageLop.Controls.Add(this.lblTitleLop);
             this.tabPageLop.Controls.Add(this.dgvLop);
-
             this.tabPageLop.Location = new System.Drawing.Point(4, 26);
-
+            this.tabPageLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPageLop.Name = "tabPageLop";
             this.tabPageLop.Size = new System.Drawing.Size(982, 474);
             this.tabPageLop.TabIndex = 1;
@@ -178,9 +170,8 @@
             this.btnReloadLop.BackColor = System.Drawing.Color.Gray;
             this.btnReloadLop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReloadLop.ForeColor = System.Drawing.Color.White;
-
-            this.btnReloadLop.Location = new System.Drawing.Point(841, 287);
-
+            this.btnReloadLop.Location = new System.Drawing.Point(835, 267);
+            this.btnReloadLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnReloadLop.Name = "btnReloadLop";
             this.btnReloadLop.Size = new System.Drawing.Size(138, 65);
             this.btnReloadLop.TabIndex = 3;
@@ -190,9 +181,8 @@
             // 
             // btnSuaLop
             // 
-
-            this.btnSuaLop.Location = new System.Drawing.Point(841, 145);
-
+            this.btnSuaLop.Location = new System.Drawing.Point(835, 129);
+            this.btnSuaLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSuaLop.Name = "btnSuaLop";
             this.btnSuaLop.Size = new System.Drawing.Size(138, 65);
             this.btnSuaLop.TabIndex = 1;
@@ -201,9 +191,8 @@
             // 
             // btnThemLop
             // 
-
-            this.btnThemLop.Location = new System.Drawing.Point(841, 74);
-
+            this.btnThemLop.Location = new System.Drawing.Point(835, 60);
+            this.btnThemLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnThemLop.Name = "btnThemLop";
             this.btnThemLop.Size = new System.Drawing.Size(138, 65);
             this.btnThemLop.TabIndex = 0;
@@ -212,9 +201,8 @@
             // 
             // btnXoaLop
             // 
-
-            this.btnXoaLop.Location = new System.Drawing.Point(841, 216);
-
+            this.btnXoaLop.Location = new System.Drawing.Point(835, 198);
+            this.btnXoaLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnXoaLop.Name = "btnXoaLop";
             this.btnXoaLop.Size = new System.Drawing.Size(138, 65);
             this.btnXoaLop.TabIndex = 2;
@@ -238,9 +226,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvLop.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvLop.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-
-            this.dgvLop.Location = new System.Drawing.Point(15, 74);
-
+            this.dgvLop.Location = new System.Drawing.Point(11, 60);
+            this.dgvLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvLop.Name = "dgvLop";
             this.dgvLop.Size = new System.Drawing.Size(820, 370);
             this.dgvLop.TabIndex = 1;
@@ -255,9 +242,8 @@
             this.tabPageMonHoc.Controls.Add(this.btnThemMon);
             this.tabPageMonHoc.Controls.Add(this.lblTitleMon);
             this.tabPageMonHoc.Controls.Add(this.dgvMonHoc);
-
             this.tabPageMonHoc.Location = new System.Drawing.Point(4, 26);
-
+            this.tabPageMonHoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPageMonHoc.Name = "tabPageMonHoc";
             this.tabPageMonHoc.Size = new System.Drawing.Size(982, 474);
             this.tabPageMonHoc.TabIndex = 2;
@@ -268,9 +254,8 @@
             this.btnReloadMon.BackColor = System.Drawing.Color.Gray;
             this.btnReloadMon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReloadMon.ForeColor = System.Drawing.Color.White;
-
-            this.btnReloadMon.Location = new System.Drawing.Point(841, 287);
-
+            this.btnReloadMon.Location = new System.Drawing.Point(835, 267);
+            this.btnReloadMon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnReloadMon.Name = "btnReloadMon";
             this.btnReloadMon.Size = new System.Drawing.Size(138, 65);
             this.btnReloadMon.TabIndex = 3;
@@ -279,33 +264,33 @@
             // 
             // btnXoaMon
             // 
-
-            this.btnXoaMon.Location = new System.Drawing.Point(841, 216);
-
+            this.btnXoaMon.Location = new System.Drawing.Point(835, 198);
+            this.btnXoaMon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnXoaMon.Name = "btnXoaMon";
             this.btnXoaMon.Size = new System.Drawing.Size(138, 65);
             this.btnXoaMon.TabIndex = 2;
             this.btnXoaMon.Text = "Xóa";
+            this.btnXoaMon.Click += new System.EventHandler(this.btnXoaMon_Click);
             // 
             // btnSuaMon
             // 
-
-            this.btnSuaMon.Location = new System.Drawing.Point(841, 145);
-
+            this.btnSuaMon.Location = new System.Drawing.Point(835, 129);
+            this.btnSuaMon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSuaMon.Name = "btnSuaMon";
             this.btnSuaMon.Size = new System.Drawing.Size(138, 65);
             this.btnSuaMon.TabIndex = 1;
             this.btnSuaMon.Text = "Sửa";
+            this.btnSuaMon.Click += new System.EventHandler(this.btnSuaMon_Click);
             // 
             // btnThemMon
             // 
-
-            this.btnThemMon.Location = new System.Drawing.Point(841, 74);
-
+            this.btnThemMon.Location = new System.Drawing.Point(835, 60);
+            this.btnThemMon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnThemMon.Name = "btnThemMon";
             this.btnThemMon.Size = new System.Drawing.Size(138, 65);
             this.btnThemMon.TabIndex = 0;
             this.btnThemMon.Text = "Thêm";
+            this.btnThemMon.Click += new System.EventHandler(this.btnThemMon_Click);
             // 
             // lblTitleMon
             // 
@@ -324,12 +309,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvMonHoc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMonHoc.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-
-            this.dgvMonHoc.Location = new System.Drawing.Point(15, 74);
-
+            this.dgvMonHoc.Location = new System.Drawing.Point(11, 60);
+            this.dgvMonHoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvMonHoc.Name = "dgvMonHoc";
             this.dgvMonHoc.Size = new System.Drawing.Size(820, 370);
             this.dgvMonHoc.TabIndex = 1;
+            this.dgvMonHoc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMonHoc_CellClick);
             // 
             // lblHeader
             // 
@@ -338,7 +323,7 @@
             this.lblHeader.ForeColor = System.Drawing.Color.MidnightBlue;
             this.lblHeader.Location = new System.Drawing.Point(0, 0);
             this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(1014, 80);
+            this.lblHeader.Size = new System.Drawing.Size(1014, 65);
             this.lblHeader.TabIndex = 2;
             this.lblHeader.Text = "HỆ THỐNG QUẢN LÝ ĐÀO TẠO";
             this.lblHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -351,7 +336,7 @@
             this.ClientSize = new System.Drawing.Size(1014, 599);
             this.Controls.Add(this.tabControlMain);
             this.Controls.Add(this.lblHeader);
-
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lý Sinh Viên Pro - Dashboard";
