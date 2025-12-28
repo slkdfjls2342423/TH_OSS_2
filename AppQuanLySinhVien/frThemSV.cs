@@ -61,6 +61,7 @@ namespace AppQuanLySinhVien
 
             if(hocSinhCtr.ThemHocSinh(sv) > 0)
             {
+                this.DialogResult = DialogResult.OK;
                 this.Close(); // Đóng form sau khi lưu
             }
 
