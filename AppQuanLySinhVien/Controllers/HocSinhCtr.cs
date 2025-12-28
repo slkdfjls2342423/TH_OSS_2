@@ -77,6 +77,7 @@ namespace AppQuanLySinhVien.Controllers
                 if (Get(sinhVien.MaSinhVien)!=null)
                 {
                     MessageBox.Show("Mã sinhvien này đã tồn tại trong hệ thống");
+                    return -1;
                 }
                 SqlCommand cmd = new SqlCommand("INSERT INTO SINHVIEN (MaSv, HoTen, NgaySinh, phai, noisinh, DiaChi, MaLop) VALUES (@MaSinhVien, @HoTen, @NgaySinh, @GioiTinh, @NoiSinh, @DiaChi, @MaLop)", con);
                 cmd.Parameters.AddWithValue("@MaSinhVien", sinhVien.MaSinhVien);
